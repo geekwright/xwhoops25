@@ -18,7 +18,7 @@ class XwhoopsPreload extends PreloadItem
      */
     public static function eventCoreIncludeCommonAuthSuccess()
     {
-        $permissionHelper = new Permission('xwhoopsmc');
+        $permissionHelper = new Permission('xwhoops');
         if ($permissionHelper) {
             $permissionName = 'use_xwhoops';
             $permissionItemId = 0;

@@ -20,6 +20,7 @@ class Xwhoops25CorePreload extends XoopsPreloadItem
         $autoloader = dirname(__DIR__) . '/vendor/autoload.php';
         if (!file_exists($autoloader)) {
             trigger_error("xwhoops25/vendor/autoload.php not found, was 'composer install' done?");
+            return;
         }
         require_once $autoloader;
         $permissionHelper = new Permission('xwhoops25');

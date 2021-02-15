@@ -11,7 +11,7 @@
 
 $modversion['dirname']     = basename(__DIR__);
 $modversion['name']        = _MI_XWHOOPS_NAME;
-$modversion['version']     = '0.2';
+$modversion['version']     = '0.3';
 $modversion['description'] = _MI_XWHOOPS_DSC;
 $modversion['author']      = 'Richard Griffith';
 $modversion['nickname']    = 'geekwright';

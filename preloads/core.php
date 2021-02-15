@@ -38,6 +38,9 @@ class Xwhoops25CorePreload extends XoopsPreloadItem
                     _LOGGER_QUERIES,
                     function () {
                         $logger = XoopsLogger::getInstance();
+                        if (false == $logger->renderingEnabled) {
+                            return ['XoopsLogger' => 'off'];  // logger is off so data is incomplete
+                        }
                         $queries = [];
                         $count=1;
                         foreach($logger->queries as $key => $q) {

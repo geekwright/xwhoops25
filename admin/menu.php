@@ -10,7 +10,7 @@
  */
 
 /**
- * @copyright 2019 XOOPS Project (https://xoops.org)
+ * @copyright 2019-2021 XOOPS Project (https://xoops.org)
  * @license   GNU GPL 2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
  * @author    Richard Griffith <richard@geekwright.com>
  */
@@ -36,10 +36,10 @@ $adminmenu[] = array(
     'title' => _MI_XWHOOPS_ADMENU2 ,
     'link'  => 'admin/about.php' ,
     'icon'  => $pathIcon32.'about.png'
-) ;
-
+);
+// Permissions
 $adminmenu[] = array(
-    'title'	=> _MI_XWHOOPS_ADMENU3 ,
-    'link'	=> 'admin/permissions.php' ,
-    'icon'	=> 'permissions.png'
-) ;
+    'title' => _MI_XWHOOPS_ADMENU3 ,
+    'link'  => 'admin/permissions.php' ,
+    'icon'  => $pathIcon32.'permissions.png'
+);

@@ -1,3 +1,4 @@
-v0.1.0
-=================================
-- Original release of xWhoops
+v0.2
+================================
+- Forked from geekwright/xwhoops
+- Adapted to XoopsCore25

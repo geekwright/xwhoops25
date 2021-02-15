@@ -10,7 +10,7 @@
  */
 
 /**
- * @copyright 2019 XOOPS Project (https://xoops.org)
+ * @copyright 2019-2021 XOOPS Project (https://xoops.org)
  * @license   GNU GPL 2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
  * @author    Richard Griffith <richard@geekwright.com>
  */
@@ -24,6 +24,8 @@ use Xmf\Module\Helper\Permission;
 
 include_once __DIR__ . '/admin_header.php';
 
+require_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
+
 $moduleAdmin = Admin::getInstance();
 $moduleAdmin->displayNavigation('permissions.php');
 
@@ -35,14 +37,16 @@ if ($permHelper) {
     $permissionItemId=0;
 
     // if this is a post operation get our variables
-    if ('POST'===Request::getMethod()) {
+    if ('POST' === Request::getMethod()) {
+        if (!$GLOBALS['xoopsSecurity']->check()) {
+            redirect_header(XOOPS_URL . '/', 3, $GLOBALS['xoopsSecurity']->getErrors());
+        }
         $name=$permHelper->defaultFieldName($permissionName, $permissionItemId);
         $groups=Request::getVar($name, array(), 'POST');
         $permHelper->savePermissionForItem($permissionName, $permissionItemId, $groups);
-        echo $xoops->alert('success', _MA_XWHOOPS_FORM_PROCESSED, _MA_XWHOOPS_PERMISSION_FORM);
+        xoops_result(_MA_XWHOOPS_FORM_PROCESSED, _MA_XWHOOPS_PERMISSION_FORM);
     }
-
-    $form = new \Xoops\Form\ThemeForm(_MA_XWHOOPS_PERMISSION_FORM, 'form', '', 'POST');
+    $form = new XoopsThemeForm(_MA_XWHOOPS_PERMISSION_FORM, 'form', '', 'POST', true);
     $permElement = $permHelper->getGroupSelectFormForItem(
         $permissionName,
         $permissionItemId,
@@ -52,7 +56,7 @@ if ($permHelper) {
     );
 
     $form->addElement($permElement);
-    $form->addElement(new \Xoops\Form\Button('', 'submit', _MA_XWHOOPS_FORM_SUBMIT, 'submit'));
+    $form->addElement(new XoopsFormButton('', 'submit', _MA_XWHOOPS_FORM_SUBMIT, 'submit'));
 
     echo $form->render();
 }

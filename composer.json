@@ -2,9 +2,11 @@
     "name": "geekwright/xwhoops",
     "license": "GPL-2.0+",
     "type": "xoops-module",
-    "description": "Whoops for XOOPS",
+    "description": "Whoops for XoopsCore25",
     "require": {
-        "xoops/module-installer-plugin": "^1.1",
         "filp/whoops": "^2.1"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
     }
 }

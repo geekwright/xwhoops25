@@ -1,15 +1,14 @@
 <?php
 
 use Xmf\Module\Helper\Permission;
-use Xoops\Core\PreloadItem;
 
 
 /**
- * @copyright 2019 XOOPS Project (https://xoops.org)
+ * @copyright 2019-2021 XOOPS Project (https://xoops.org)
  * @license   GNU GPL 2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
  * @author    Richard Griffith <richard@geekwright.com>
  */
-class XwhoopsPreload extends PreloadItem
+class Xwhoops25CorePreload extends XoopsPreloadItem
 {
     /**
      * eventCoreIncludeCommonAuthSuccess
@@ -18,7 +17,12 @@ class XwhoopsPreload extends PreloadItem
      */
     public static function eventCoreIncludeCommonAuthSuccess()
     {
-        $permissionHelper = new Permission('xwhoops');
+        $autoloader = dirname(__DIR__) . '/vendor/autoload.php';
+        if (!file_exists($autoloader)) {
+            trigger_error("xwhoops25/vendor/autoload.php not found, was 'composer install' done?");
+        }
+        require_once $autoloader;
+        $permissionHelper = new Permission('xwhoops25');
         if ($permissionHelper) {
             $permissionName = 'use_xwhoops';
             $permissionItemId = 0;

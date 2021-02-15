@@ -17,6 +17,7 @@ $modversion['author']      = 'Richard Griffith';
 $modversion['nickname']    = 'geekwright';
 $modversion['credits']     = 'The XOOPS Project';
 $modversion['help']        = 'page=help';
+$modversion['website']     = 'https://github.com/geekwright/xwhoops25';
 $modversion['license']     = 'GNU GPL 2 or later';
 $modversion['license_url'] = 'https://www.gnu.org/licenses/gpl-2.0.html';
 $modversion['official']    = 0;
@@ -39,7 +40,7 @@ $modversion['extension_module'][] = 'system';
 // About stuff
 $modversion['module_status'] = 'Alpha';
 $modversion['status'] = 'Alpha';
-$modversion['release_date'] = '02/19/2019';
+$modversion['release_date'] = '2021/02/14';
 
-$modversion['min_xoops'] = '2.6.0';
+$modversion['min_xoops'] = '2.5.11';
 $modversion['min_php'] = '7.1.0';

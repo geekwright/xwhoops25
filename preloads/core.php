@@ -44,7 +44,7 @@ class Xwhoops25CorePreload extends XoopsPreloadItem
                         $queries = [];
                         $count=1;
                         foreach($logger->queries as $key => $q) {
-                            $error = (null===$q['errno'] ? '' : $q['errno']) . (null===$q['error'] ? '' : $q['error']);
+                            $error = (null===$q['errno'] ? '' : $q['errno'].' ') . (null===$q['error'] ? '' : $q['error']);
                             $queryTime = isset($q['query_time']) ? sprintf('%0.6f', $q['query_time']) : '';
                             $queryKey = (string) $count++ . ' - ' . $queryTime;
                             if (null !== $q['errno']) {

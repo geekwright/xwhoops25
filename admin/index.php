@@ -22,6 +22,10 @@ require __DIR__ . '/admin_header.php';
 
 $moduleAdmin = Admin::getInstance();
 $moduleAdmin->displayNavigation('index.php');
+$autoloader = dirname(__DIR__) . '/vendor/autoload.php';
+if (!file_exists($autoloader)) {
+    $moduleAdmin->addConfigWarning(_MI_XWHOOPS_NEEDS_COMPOSER);
+}
 $moduleAdmin->displayIndex();
 
 require __DIR__ . '/admin_footer.php';

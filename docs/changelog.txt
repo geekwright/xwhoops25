@@ -1,3 +1,12 @@
+v0.4
+================================
+- polish admin section
+
+v0.3
+================================
+- Fail gracefully if "compose install" has not been run
+- Add MySQL queries to the environment section
+
 v0.2
 ================================
 - Forked from geekwright/xwhoops

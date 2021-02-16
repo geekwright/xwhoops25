@@ -12,3 +12,5 @@ define('_MI_XWHOOPS_DSC','Whoops for XOOPS');
 define('_MI_XWHOOPS_ADMENU1','Home');
 define('_MI_XWHOOPS_ADMENU2','About');
 define('_MI_XWHOOPS_ADMENU3','Permissions');
+
+define('_MI_XWHOOPS_NEEDS_COMPOSER', 'xWhoops needs to have "composer install" run to work. See the help page.');

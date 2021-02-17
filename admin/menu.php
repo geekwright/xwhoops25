@@ -27,19 +27,25 @@ if (class_exists('Xmf\Module\Admin', true)) {
 $adminmenu=array();
 // Index
 $adminmenu[] = array(
-    'title' => _MI_XWHOOPS_ADMENU1 ,
+    'title' => _MI_XWHOOPS_HOME ,
     'link'  => 'admin/index.php' ,
     'icon'  => $pathIcon32.'home.png'
 ) ;
 // About
 $adminmenu[] = array(
-    'title' => _MI_XWHOOPS_ADMENU2 ,
+    'title' => _MI_XWHOOPS_ABOUT ,
     'link'  => 'admin/about.php' ,
     'icon'  => $pathIcon32.'about.png'
 );
 // Permissions
 $adminmenu[] = array(
-    'title' => _MI_XWHOOPS_ADMENU3 ,
+    'title' => _MI_XWHOOPS_PERMISSIONS ,
     'link'  => 'admin/permissions.php' ,
     'icon'  => $pathIcon32.'permissions.png'
+);
+// Test
+$adminmenu[] = array(
+    'title' => _MI_XWHOOPS_EXAMPLE ,
+    'link'  => 'admin/index.php?do=example' ,
+    'icon'  => $pathIcon32.'exec.png'
 );

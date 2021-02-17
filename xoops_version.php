@@ -12,7 +12,7 @@
 $modversion['dirname']     = basename(__DIR__);
 $modversion['name']        = _MI_XWHOOPS_NAME;
 $modversion['version']     = '0.4';
-$modversion['description'] = _MI_XWHOOPS_DSC;
+$modversion['description'] = _MI_XWHOOPS_DESCRIPTION;
 $modversion['author']      = 'Richard Griffith';
 $modversion['nickname']    = 'geekwright';
 $modversion['credits']     = 'The XOOPS Project';

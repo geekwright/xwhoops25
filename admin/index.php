@@ -28,4 +28,27 @@ if (!file_exists($autoloader)) {
 }
 $moduleAdmin->displayIndex();
 
+// example - bounces around and into an error
+// will show xWhoops25 page if user has permission
+$op = \Xmf\Request::getString('do');
+if ('example' === $op) {
+    require_once __DIR__ . '/ExampleClass.php';
+    number1();
+}
+
+function number1()
+{
+    number3('test message');
+}
+
+function number2(ExampleClass $ec)
+{
+    $msg = $ec->flawedMethod();
+}
+
+function number3($msg)
+{
+    number2(new ExampleClass($msg));
+}
+
 require __DIR__ . '/admin_footer.php';

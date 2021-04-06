@@ -16,6 +16,6 @@
  */
 
 define('_MA_XWHOOPS_PERMISSION_FORM','xWhoops Usage Permissions');
-define('_MA_XWHOOPS_PERMISSION_GROUPS','Select groups that may use the xWhoops');
+define('_MA_XWHOOPS_PERMISSION_GROUPS','Select groups that may use xWhoops');
 define('_MA_XWHOOPS_FORM_SUBMIT','Save');
 define('_MA_XWHOOPS_FORM_PROCESSED','Permissions updated.');

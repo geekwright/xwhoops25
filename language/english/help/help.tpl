@@ -1,4 +1,8 @@
-<h4>Description</h4>
+<div id="help-template" class="outer">
+    <{include file=$smarty.const._MI_XWHOOPS_HELP_HEADER}>
+
+
+    <h4>Description</h4>
 <p>
     xWhoops provides extended error messages for XOOPS using <a href="https://github.com/filp/whoops" class="external">whoops</a>.
     It is primarily intended for developers.
@@ -34,3 +38,4 @@
     <li>grant access by selecting groups in the permissions section</li>
     </ul>
 </p>
+</div>

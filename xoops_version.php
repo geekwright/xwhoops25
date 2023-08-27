@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
  You may not change or alter any portion of this comment or credits
  of supporting developers from this source code or any supporting source code
@@ -11,7 +11,7 @@
 
 $modversion['dirname']     = basename(__DIR__);
 $modversion['name']        = _MI_XWHOOPS_NAME;
-$modversion['version']     = '0.4';
+$modversion['version']     = '0.4.0';
 $modversion['description'] = _MI_XWHOOPS_DESCRIPTION;
 $modversion['author']      = 'Richard Griffith';
 $modversion['nickname']    = 'geekwright';
@@ -23,7 +23,7 @@ $modversion['license_url'] = 'https://www.gnu.org/licenses/gpl-2.0.html';
 $modversion['official']    = 0;
 $modversion['image']       = 'icons/logo.png';
 
-$modversion['hasMain']     = false;
+$modversion['hasMain'] = false;
 
 //$modversion['onInstall'] = "include/onInstall.php";
 
@@ -34,13 +34,13 @@ $modversion['adminindex']  = 'admin/index.php';
 $modversion['adminmenu']   = 'admin/menu.php';
 
 // Manage extension
-$modversion['extension'] = true;
+$modversion['extension']          = true;
 $modversion['extension_module'][] = 'system';
 
 // About stuff
 $modversion['module_status'] = 'Alpha';
-$modversion['status'] = 'Alpha';
-$modversion['release_date'] = '2021/02/14';
+$modversion['status']        = 'Alpha';
+$modversion['release_date']  = '2023/08/27';
 
-$modversion['min_xoops'] = '2.5.11';
-$modversion['min_php'] = '7.1.0';
+$modversion['min_xoops'] = '2.5.10';
+$modversion['min_php']   = '8.0.0';

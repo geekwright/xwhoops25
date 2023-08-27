@@ -2,7 +2,7 @@
 
 class ExampleClass
 {
-    /** @var string  */
+    /** @var string */
     private string $msg;
 
     public function __construct(string $msg)
@@ -10,11 +10,11 @@ class ExampleClass
         $this->msg = $msg;
     }
 
-    public function flawedMethod()
+    public function flawedMethod(): void
     {
         try {
             new \NoSuchClass($this->message);
-        } catch  (Throwable $e) {
+        } catch (Throwable $e) {
             throw new RuntimeException('Example Exception, follow how we got here.', 100, $e);
         }
     }

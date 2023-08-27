@@ -1,6 +1,8 @@
-v0.4
+v0.4 [NOT RELEASED]
 ================================
 - polish admin section
+- PHP 8 cosmetics (mamba)
+
 
 v0.3
 ================================

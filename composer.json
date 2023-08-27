@@ -4,9 +4,9 @@
     "type": "xoops-module",
     "description": "Whoops for XoopsCore25",
     "require": {
-        "filp/whoops": "^2.1"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-latest",
+        "filp/whoops": "^2.15"
     }
 }

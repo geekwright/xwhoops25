@@ -14,3 +14,9 @@ define('_MI_XWHOOPS_PERMISSIONS', 'Permissions');
 define('_MI_XWHOOPS_EXAMPLE', 'Example');
 
 define('_MI_XWHOOPS_NEEDS_COMPOSER', 'xWhoops needs to have "composer install" run to work. See the help page.');
+
+//Help
+\define('_MI_XWHOOPS_DIRNAME', basename(dirname(__DIR__, 2)));
+\define('_MI_XWHOOPS_HELP_HEADER', __DIR__ . '/help/helpheader.tpl');
+\define('_MI_XWHOOPS_BACK_2_ADMIN', 'Back to Administration of ');
+\define('_MI_XWHOOPS_OVERVIEW', 'Overview');
